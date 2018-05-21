@@ -1,0 +1,137 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image:url("../recursos/sanriobg.jpg");
+	background-size:contain;
+	background-attachment:fixed;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-color:#fdcbca;
+	font-family: "Open Sans";
+	font-size:22px;
+	color:#44656b;
+}
+
+#mainContainer {
+	width:90%;
+	margin:20px auto;
+	padding:20px;
+	display:flex;
+	justify-content: space-around;
+}
+
+aside {
+	margin-right:10px;
+}
+
+h1, h2, h3 {
+	font-family:"Pacifico";
+}
+
+h1 {
+	font-size:60px;
+	text-shadow:3px 3px white;
+}
+
+.board {
+	padding:20px;
+	flex-basis:calc((150px + 21px) * 4); /*el ancho es exactamente el ancho de las fichas y sus márgenes, para que siempre estén en filas de 4*/
+	flex-grow: 0;
+	flex-shrink: 0;/* no cambia con resize */
+	line-height:5px; /*para que el espacio entre filas sea igual que el margen horizontal entre fichas*/
+	background-color:rgba(250, 250, 250, 0.58);
+	box-shadow:-5px 5px 3px grey;
+}
+
+.overlay {
+	line-height:1em;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#nameInput #input {
+	font-size:20px;
+}
+
+#nameInput #input:focus {
+	outline:0;
+}
+
+#nameInput button {
+	padding:0 5px;
+	background-color:aliceblue;
+	box-shadow: none;
+	border:2px solid salmon;
+	border-radius:10px;
+	font-size:22px;
+	font-family:"Pacifico";
+	color:#44656b;
+}
+
+.square {
+	display:inline-block;
+	width:150px;
+	height:150px;
+	margin:5px;
+	border: 1px solid gray;
+	box-shadow:-1px 1px 3px gray;
+}
+
+/* CARGA IMÁGENES DESDE ACÁ */
+.hellokitty {
+	background-image: url("../recursos/hellokitty.png");	
+	background-size: contain;
+}
+
+.keroppi {
+	background-image: url("../recursos/keroppi.png");
+	background-size: contain;
+}
+
+.mymelody {
+	background-image: url("../recursos/mymelody.png");
+	background-size: contain;
+}
+
+.badtzmaru {
+	background-image: url("../recursos/badtzmaru.png");
+	background-size: contain;
+}
+
+.chococat {
+	background-image: url("../recursos/chococat.png");
+	background-size: contain;
+}
+
+.twinstars {
+	background-image: url("../recursos/twinstars.png");
+	background-size: contain;
+}
+
+.back {
+	background-size: 30px 30px;
+	background-image: url("../recursos/reverso.png");
+	background-color: #4881A2; /* fallback por si no anda la imagen */
+}
+
+@media (max-width:1024px) {
+	#mainContainer {
+		width:98%;
+		flex-direction: column;
+	}
+
+	aside {
+		text-align:center;
+	}
+
+	.board {
+		margin:0 auto;
+		width:calc((150px + 21px) * 4); /*le vuelvo a setear el ancho fijo*/
+	}
+}
